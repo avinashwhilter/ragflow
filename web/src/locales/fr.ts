@@ -116,10 +116,10 @@ export default {
       processDuration: 'Durée',
       progressMsg: 'Progression',
       testingDescription:
-        'Effectuez un test de récupération pour vérifier si RAGFlow peut retrouver le contenu pertinent pour le LLM. Si vous avez modifié les paramètres par défaut, comme le poids de similarité ou le seuil de similarité, ces changements ne seront pas automatiquement sauvegardés. Vous devez les appliquer dans les paramètres de votre assistant de chat ou dans le composant agent de récupération.',
+        'Effectuez un test de récupération pour vérifier si intelliRAG peut retrouver le contenu pertinent pour le LLM. Si vous avez modifié les paramètres par défaut, comme le poids de similarité ou le seuil de similarité, ces changements ne seront pas automatiquement sauvegardés. Vous devez les appliquer dans les paramètres de votre assistant de chat ou dans le composant agent de récupération.',
       similarityThreshold: 'Seuil de similarité',
       similarityThresholdTip:
-        'RAGFlow utilise une combinaison de similarité par mots-clés pondérée et de similarité cosinus vectorielle, ou bien un score de réordonnancement pondéré. Ce paramètre fixe le seuil en dessous duquel un segment est exclu. Par défaut, le seuil est 0.2 (soit 20%).',
+        'intelliRAG utilise une combinaison de similarité par mots-clés pondérée et de similarité cosinus vectorielle, ou bien un score de réordonnancement pondéré. Ce paramètre fixe le seuil en dessous duquel un segment est exclu. Par défaut, le seuil est 0.2 (soit 20%).',
       vectorSimilarityWeight: 'Poids de similarité des mots-clés',
       vectorSimilarityWeightTip:
         'Définit l’importance de la similarité par mots-clés dans le score global. Le total des poids doit être de 1.0.',
@@ -161,13 +161,13 @@ export default {
       changeSpecificCategory: 'Changer de catégorie spécifique',
       uploadTitle: 'Glissez-déposez votre fichier ici pour le téléverser',
       uploadDescription:
-        'Prise en charge du téléversement unique ou en lot. Pour RAGFlow en local : 1 Go max par téléversement, jusqu’à 32 fichiers. Pour demo.ragflow.io : 10 Mo max par fichier uploadDescription128 fichiers au total.',
+        'Prise en charge du téléversement unique ou en lot. Pour intelliRAG en local : 1 Go max par téléversement, jusqu à 32 fichiers. Pour demo.ragflow.io : 10 Mo max par fichier uploadDescription128 fichiers au total.',
       chunk: 'Segment',
       bulk: 'En masse',
       cancel: 'Annuler',
       rerankModel: 'Modèle de réordonnancement',
       rerankPlaceholder: 'Veuillez sélectionner',
-      rerankTip: `Optionnel. Si vide, RAGFlow utilisera une combinaison de similarités pondérées. Un modèle de réordonnancement remplace la similarité vectorielle. Attention, cela augmente le temps de réponse. Pour un modèle local, utilisez docker-compose-gpu.yml.`,
+      rerankTip: `Optionnel. Si vide, intelliRAG utilisera une combinaison de similarités pondérées. Un modèle de réordonnancement remplace la similarité vectorielle. Attention, cela augmente le temps de réponse. Pour un modèle local, utilisez docker-compose-gpu.yml.`,
       topK: 'Top-K',
       topKTip: 'Nombre de segments à envoyer au modèle de réordonnancement.',
       delimiter: 'Délimiteur de texte',
@@ -355,8 +355,8 @@ export default {
       topN: 'Top N',
       topNTip: `Tous les segments avec un score de similarité supérieur au 'seuil de similarité' ne seront pas forcément envoyés au LLM. Cela sélectionne les 'Top N' segments parmi ceux récupérés.`,
       variable: 'Variable',
-      variableTip: `Utilisé avec les API de gestion d’assistant de chat de RAGFlow, les variables aident à développer des stratégies de prompt système plus flexibles. Les variables définies seront utilisées dans le 'Prompt système' comme partie des prompts pour le LLM. {knowledge
-      } est une variable spéciale réservée représentant les segments récupérés des bases de connaissances spécifiées. Toutes les variables doivent être entourées d’accolades {} dans le 'Prompt système'. Voir https: //ragflow.io/docs/dev/set_chat_variables pour plus de détails.`,
+      variableTip: `Utilisé avec les API de gestion d'assistant de chat de intelliRAG, les variables aident à développer des stratégies de prompt système plus flexibles. Les variables définies seront utilisées dans le 'Prompt système' comme partie des prompts pour le LLM. {knowledge
+      } est une variable spéciale réservée représentant les segments récupérés des bases de connaissances spécifiées. Toutes les variables doivent être entourées d'accolades {} dans le 'Prompt système'. Voir https: //ragflow.io/docs/dev/set_chat_variables pour plus de détails.`,
       add: 'Ajouter',
       key: 'Clé',
       optional: 'Optionnel',
